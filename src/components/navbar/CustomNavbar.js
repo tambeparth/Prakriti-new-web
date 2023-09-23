@@ -1,15 +1,19 @@
 import React from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, Image } from 'react-bootstrap'; // Import Image from react-bootstrap
 import { Link } from 'react-router-dom';
-import './CustomNavbar.css'; // Update the CSS import path and name
+import './CustomNavbar.css';
+import Logo from "../../images/logo-transperent.png";
 
 const MyCustomNavbar = () => {
     return (
         <div className='header-menu'>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="/">
-                        <Link to="/">Prakriti</Link>
+                    {/* Add the Prakriti logo to the Navbar */}
+                    <Image src={Logo} alt="Prakriti Logo" className="prakriti-logo" />
+
+                    <Navbar.Brand href="/" className="prakriti-classname">
+                        <Link to="/" >Prakriti</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

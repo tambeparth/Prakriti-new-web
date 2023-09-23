@@ -1,0 +1,81 @@
+/* ChatBot container styles */
+.chatbot-container {
+    margin: 10% auto;
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
+    /* Shadow effect */
+    background-color: #154d28;
+    /* Green background color */
+    padding: 20px;
+    /* margin: 0 auto; */
+    color: #fff;
+    /* Text color */
+}
+
+
+/* ChatBot header styles */
+.chatbot-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.chatbot-header h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    /* Header text color */
+}
+
+/* ChatBot messages styles */
+.chatbot-messages {
+    margin-bottom: 20px;
+}
+
+.chatbot-message {
+    background-color: #fff;
+    /* White background color */
+    color: #000;
+    /* Text color */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.chatbot-message.user {
+    background-color: #00cc44;
+    /* User's message background color */
+    color: #fff;
+    /* User's message text color */
+}
+
+/* ChatBot input styles */
+.chatbot-input {
+    text-align: center;
+}
+
+input[type='text'] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button[type='submit'] {
+    background-color: #007a29;
+    /* Submit button background color */
+    color: #fff;
+    margin: 5% auto;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button[type='submit']:hover {
+    background-color: #00561a;
+    /* Hovered button background color */
+}

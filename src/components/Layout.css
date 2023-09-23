@@ -1,0 +1,6 @@
+/* Layout.css */
+.background {
+    background: url(../images/back.png) center/cover no-repeat fixed;
+    min-height: 100vh;
+    position: relative;
+}

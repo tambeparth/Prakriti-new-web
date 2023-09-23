@@ -1,0 +1,83 @@
+/* Home.css */
+
+/* Main content container styles */
+.main-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hero section styles */
+.hero-section {
+    background-color: #605f5f;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.bold-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+.paragraph {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 20px;
+    color: #c7c7c7;
+}
+
+.paragraph ul {
+    display: flex;
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.first-col,
+.second-col {
+    flex: 1;
+    margin: 5px 20px;
+    /* Add some margin between list items */
+}
+
+.paragraph ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: center;
+    /* Center text within list items */
+}
+
+/* Button styles */
+.btn {
+    margin-top: 30px;
+}
+
+.start-quiz-button,
+.chat-button {
+    background-color: #28a745;
+    /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    text-decoration: none;
+    /* Remove text underline */
+    display: inline-block;
+    /* Ensure the button behaves as an inline-block element */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.start-quiz-button:hover,
+.chat-button:hover {
+    background-color: #1f8d40;
+    /* Darker green on hover */
+}

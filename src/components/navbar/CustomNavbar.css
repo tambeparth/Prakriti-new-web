@@ -1,0 +1,23 @@
+/* CustomNavbar.css */
+
+.header-menu {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar-brand a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link a:hover {
+    color: #007bff;
+    /* Change color on hover */
+}
+
+/* You can add more styles to customize the Navbar further */

@@ -13,6 +13,7 @@ import Layout from './components/Layout';
 
 function App() {
   return (
+    // <ClerkProvider publishableKey={clerkPubKey}>
     <Router>
       <div className="App">
         <CustomNavbar />
@@ -30,6 +31,7 @@ function App() {
         </Layout>
       </div>
     </Router>
+    // </ClerkProvider>
   );
 }
 

@@ -3,7 +3,8 @@ import { Navbar, Container, Nav, Image } from 'react-bootstrap'; // Import Image
 import { Link } from 'react-router-dom';
 import './CustomNavbar.css';
 import Logo from "../../images/logo-transperent.png";
-
+// import Login from "../../images/profile.png";
+// import Login from "https://www.flaticon.com/free-icons/login";
 const MyCustomNavbar = () => {
     return (
         <div className='header-menu'>
@@ -27,7 +28,13 @@ const MyCustomNavbar = () => {
                             <Nav.Link href="/History">
                                 <Link to="/History">History</Link>
                             </Nav.Link>
+                            {/* <Nav.Link href="/History">
+                                <Link to="/History">Home</Link>
+                            </Nav.Link> */}
                         </Nav>
+                        {/* <Nav.Link href="/">
+                            <Link to="/"><img href={Login} alt='sorryy'></img></Link>
+                        </Nav.Link> */}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

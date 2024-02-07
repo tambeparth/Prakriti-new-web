@@ -1,0 +1,73 @@
+/* History.css */
+.history-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.text-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-container h1 {
+    color: white;
+}
+
+.text-container h3 {
+    color: white;
+}
+
+.text-container p {
+    color: white;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: 400px;
+}
+
+
+/* For screens smaller than 768px (typical mobile screens) */
+@media screen and (max-width: 768px) {
+    .history-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+
+    }
+
+    .history-container::after {
+        content: "";
+        display: block;
+        height: 1px;
+        /* Adjust the height of the horizontal line */
+        width: 100%;
+        /* Set the width to 100% to create a full-width line */
+        background-color: #ffffff;
+        /* Change the background color to your desired color */
+        margin: 10px 0;
+    }
+
+    .text-container {
+        padding: 10px;
+    }
+
+    .image-container {
+        justify-content: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        /* Allow images to adjust their height */
+    }
+}

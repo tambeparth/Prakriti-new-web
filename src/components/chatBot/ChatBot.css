@@ -1,12 +1,13 @@
 /* ChatBot container styles */
 .chatbot-container {
-    margin: 10% auto;
+    margin: auto;
+    transform: translateY(30%);
     width: 600px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
     /* Shadow effect */
-    background-color: #154d28;
+    background-color: #5C5470;
     /* Green background color */
     padding: 20px;
     /* margin: 0 auto; */

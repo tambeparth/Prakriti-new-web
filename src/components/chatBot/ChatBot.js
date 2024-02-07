@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ChatBot.css'; // Import your CSS file for styling
 
 const ChatBot = () => {
@@ -6,25 +6,41 @@ const ChatBot = () => {
         { text: 'Hello! How can I assist you?', fromUser: false },
     ]);
     const [userInput, setUserInput] = useState('');
+    const [botTyping, setBotTyping] = useState(false);
 
-    const handleUserInput = (e) => {
-        setUserInput(e.target.value);
+    const addBotResponse = async (userInput) => {
+        setBotTyping(true);
+
+        try {
+            const response = await fetch('/api/chatbot', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ input: userInput }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                setMessages([...messages, { text: userInput, fromUser: true }]);
+                setMessages([...messages, { text: data.reply, fromUser: false }]);
+            } else {
+                console.error('Error:', response.statusText);
+                setMessages([...messages, { text: 'An error occurred.', fromUser: false }]);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setMessages([...messages, { text: 'An error occurred.', fromUser: false }]);
+        } finally {
+            setBotTyping(false);
+        }
     };
 
-    const handleUserSubmit = (e) => {
+    const handleUserSubmit = async (e) => {
         e.preventDefault();
         if (userInput.trim() !== '') {
-            // Add user message
-            setMessages([...messages, { text: userInput, fromUser: true }]);
+            addBotResponse(userInput);
             setUserInput('');
-
-            // Simulate a response from the ChatBot (you can replace this with your logic)
-            setTimeout(() => {
-                setMessages([
-                    ...messages,
-                    { text: 'I am a ChatBot. How can I assist you?', fromUser: false },
-                ]);
-            }, 1000);
         }
     };
 
@@ -42,6 +58,11 @@ const ChatBot = () => {
                         {message.text}
                     </div>
                 ))}
+                {botTyping && (
+                    <div className="chatbot-message bot">
+                        <span className="typing-indicator">Bot is typing...</span>
+                    </div>
+                )}
             </div>
             <div className="chatbot-input">
                 <form onSubmit={handleUserSubmit}>
@@ -49,7 +70,7 @@ const ChatBot = () => {
                         type="text"
                         placeholder="Type your message..."
                         value={userInput}
-                        onChange={handleUserInput}
+                        onChange={(e) => setUserInput(e.target.value)}
                     />
                     <button type="submit">Send</button>
                 </form>

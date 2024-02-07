@@ -28,9 +28,9 @@ const MyCustomNavbar = () => {
                             <Nav.Link href="/History">
                                 <Link to="/History">History</Link>
                             </Nav.Link>
-                            {/* <Nav.Link href="/History">
-                                <Link to="/History">Home</Link>
-                            </Nav.Link> */}
+                            <Nav.Link href="/Home">
+                                <Link to="/Home">Home</Link>
+                            </Nav.Link>
                         </Nav>
                         {/* <Nav.Link href="/">
                             <Link to="/"><img href={Login} alt='sorryy'></img></Link>
